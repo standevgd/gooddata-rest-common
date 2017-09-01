@@ -5,7 +5,7 @@
     <artifactId>gooddata-rest-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
-    <description>GoodData Java SDK</description>
+    <description>GoodData REST Common Library</description>
     <url>https://github.com/gooddata/gooddata-java</url>
 
     <parent>

@@ -3,8 +3,9 @@
  * This source code is licensed under the BSD-style license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
-package com.gooddata;
+package com.gooddata.rest;
 
+import com.gooddata.rest.UriPrefixer;
 import org.springframework.web.util.UriComponentsBuilder;
 import org.testng.annotations.Test;
 

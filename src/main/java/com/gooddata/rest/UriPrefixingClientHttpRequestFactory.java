@@ -3,12 +3,11 @@
  * This source code is licensed under the BSD-style license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
-package com.gooddata;
+package com.gooddata.rest;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpRequestFactory;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 
 import java.io.IOException;
 import java.net.URI;
@@ -32,7 +31,7 @@ public class UriPrefixingClientHttpRequestFactory implements ClientHttpRequestFa
      * @param factory   the factory to be wrapped
      * @param uriPrefix the URI for setting hostname and port of all HTTP requests
      */
-    UriPrefixingClientHttpRequestFactory(ClientHttpRequestFactory factory, URI uriPrefix) {
+    public UriPrefixingClientHttpRequestFactory(final ClientHttpRequestFactory factory, final URI uriPrefix) {
         this(factory, new UriPrefixer(uriPrefix));
     }
 
@@ -43,7 +42,7 @@ public class UriPrefixingClientHttpRequestFactory implements ClientHttpRequestFa
      * @param factory  the factory to be wrapped
      * @param uri the URI for setting hostname and port of all HTTP requests
      */
-    public UriPrefixingClientHttpRequestFactory(final HttpComponentsClientHttpRequestFactory factory, final String uri) {
+    public UriPrefixingClientHttpRequestFactory(final ClientHttpRequestFactory factory, final String uri) {
         this(factory, URI.create(uri));
     }
 
